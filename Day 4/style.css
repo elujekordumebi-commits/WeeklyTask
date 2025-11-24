@@ -1,0 +1,38 @@
+body{
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    .services-section {
+        width: 90%;
+        max-width: 1200px;
+        margin: 40px auto;
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        flex-wrap: wrap; /* helps support responsive stacking */
+    }
+        .service-card {
+        background: white;
+        flex: 1;
+        min-width: 280px; /* triggers stacking on small screens */
+        padding: 25px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+     .service-card p {
+        color: #666;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    /* Mobile responsive stack */
+    @media(max-width: 768px) {
+        .services-section {
+            flex-direction: column;
+        }
+    }
+

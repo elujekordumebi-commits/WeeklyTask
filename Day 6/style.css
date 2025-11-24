@@ -1,0 +1,81 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: arial,sans-serif;
+}
+
+/* NAVBAR CONTAINER*/
+nav{
+width: 100%;
+background: #111;
+color: #fff;
+padding: 15px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+/* LOGO SECTION*/
+.logo{
+display: flex;
+align-items: center;
+gap: 10px;
+font-size: 1.3rem;
+font-weight: bold;
+}
+
+.logo img{
+width: 35px;
+height: 35px;
+}
+
+/* NAV LINKS */
+.nav-links{
+display: flex;
+transition: 3s;
+}
+.nav-links a:hover{
+color: #f44336;
+}
+/* HAMBURGER */
+.munu-btn{
+display: none;
+}
+
+menu-icon{
+display: none;
+font-size: 28px;
+cursor: pointer;
+}
+
+/* ========== MOBILE STYLES ==========*/
+@media(max-width: 768px){
+/* Hide links by default */
+.nav-links{
+position: absolute;
+top: 70px;
+left: 0;
+width: 100%;
+background: #111;
+flex-direction: column;
+text-align: center;
+display: none;
+padding: 20px 0;
+}
+}
+
+.nav-links a{
+padding: 12px 0;
+display: block;
+}
+/* show hamburger */
+.menu-icon{
+display: block;
+}
+
+/* toggle menu when checkbox */
+.menu-btn:checked ~ .nav-links{
+display: flex;
+}
+
